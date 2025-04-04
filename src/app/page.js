@@ -15,7 +15,9 @@ function Controls() {
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-grid">
+      <div className="w-5xl h-32 bg-[#ff897a68] rounded-full blur-3xl absolute top-1.5"></div>
+      <div className="w-5xl h-32 bg-[#7e7aff58] rounded-full blur-3xl absolute right-3.5 top-1.5"></div>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <BearCounter/>
         <Controls/>
