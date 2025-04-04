@@ -1,10 +1,24 @@
+"use client"
 import { Assets } from "@/assets/assets";
 import Image from "next/image";
+import { useBearStore } from "@/stores/bear";
+
+function BearCounter() {
+  const bears = useBearStore((state) => state.bears)
+  return <h1>{bears} bears around here...</h1>
+}
+
+function Controls() {
+  const increasePopulation = useBearStore((state) => state.increasePopulation)
+  return <button onClick={increasePopulation}>one up</button>
+}
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <BearCounter/>
+        <Controls/>
         <Image
           className="dark:invert"
           src={Assets.next_svg}
