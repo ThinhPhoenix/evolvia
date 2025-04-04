@@ -2,8 +2,8 @@ import { Messages } from '@/utils/enums/messages'
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: import.meta.env.SERVER || 'https://api.example.com',
-  timeout: 10000,
+  baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
+  timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
   },
